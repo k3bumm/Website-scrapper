@@ -1,11 +1,13 @@
 #include <cpr/cpr.h>
 #include <iostream>
 #include <regex>
+#include <windows.h>
 using namespace std;
-
 int main() {
     string Welche_website;
-    string Was_tun;
+    string Was_tun; 
+    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(h,2);
 
     cout << "Gebe die Website ein die gescrapt werden soll:\n";
     cin >> Welche_website;
@@ -52,6 +54,5 @@ int main() {
     } else {
         cout << "Das ist keine Anwendung. Bitte starte das Programm neu." << endl;
     }
-
     return 0;
 }

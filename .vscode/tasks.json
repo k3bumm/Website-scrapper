@@ -11,7 +11,7 @@
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "-lcpr",
-                "-lcurl"
+                "-lcurl",
             ],
             "options": {
                 "cwd": "${fileDirname}"

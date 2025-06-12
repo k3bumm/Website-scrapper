@@ -2,8 +2,8 @@
 setlocal
 
 REM --- Quell- und Ziel-Dateien ---
-set SRC=Process_input.cpp
-set OUT=Process_input.exe
+set SRC=Scrapen.cpp
+set OUT=Scrapen.exe
 
 REM --- Include- und Lib-Pfade ---
 set INC=C:/msys64/ucrt64/include
@@ -17,7 +17,7 @@ echo === Kompiliere mit g++ ===
   -I"%INC%" -L"%LIB%" ^
   "%SRC%" -o "%OUT%" ^
   -lnana -lole32 -luuid -loleaut32 -lcomctl32 -lshell32 -ljpeg -lpng -lz ^
-  -lopengl32 -lglu32 -lglew32
+  -lopengl32 -lglu32 -lglew32 -lcpr -lcurl
 
 set ERR=%ERRORLEVEL%
 echo ==========================
